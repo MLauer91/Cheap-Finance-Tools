@@ -1,3 +1,7 @@
+# DESCRIPTION
+# This imports quarterly CPI and GDP information from FRED to display the US Economy's Hedgeye QUAD.
+# All credit to Hedgeye for coming up with the terminology.
+
 import time
 import pandas as pd
 pd.options.mode.chained_assignment = None
