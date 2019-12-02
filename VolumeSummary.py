@@ -28,7 +28,7 @@ MarketVolToday = pd.DataFrame({'Day': [today], 'Total Shares': [MarketVolToday]}
 
 # IMPORT SPY TICKER TO DISPLAY MARKET MOVE
 ticker = 'SPY'
-start = datetime.datetime(2018, 1, 1)
+start = datetime.datetime(datetime.date.today().year - 1, 1, 1)
 try:
     LoadIndex = web.get_data_yahoo(ticker, start, datetime.datetime.today())
 except TimeoutError:
