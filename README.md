@@ -11,4 +11,9 @@ My current projects are:
   - Charting Stocks with Non-Moving Monkey Averages (90% Python Coded, Stable Work in Google Sheets)
   - Building GDP Tracker (5% Python Coded, Stable Work in Progress in Google Sheets)
 
+Notable Modules Required
+  - Pandas
+  - yfinance
+  - Matplotlib
+
 I'm always open to feedback!
