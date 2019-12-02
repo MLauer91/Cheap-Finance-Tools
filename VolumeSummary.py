@@ -1,3 +1,8 @@
+# DESCRIPTION
+# This project shows exchange volume, as reported by the CBOE, for the past 1-2 years.
+# Z-scores are used to show variations over different time series.
+# Major credit to Hedgeye for highlighting this data and how to interpret it using z-scores.
+
 # ALL RELEVANT IMPORTATIONS
 import datetime
 import time
@@ -36,7 +41,7 @@ MarketVolY0 = pd.read_csv(CboeY0)
 MarketVolY0 = MarketVolY0['Total Shares'].groupby(MarketVolY0['Day']).sum()
 MarketVolY0 = MarketVolY0.reset_index()
 MarketVolCurrent = MarketVolY0['Day'].count() - 1
-if str(MarketVolY0.at[MarketVolCurrent, 'Day']) != str(today) and str(MarketVolY0.at[MarketVolCurrent, 'Total Shares'])\
+if str(MarketVolY0.at[MarketVolCurrent, 'Day']) != str(today) and str(MarketVolY0.at[MarketVolCurrent, 'Total Shares']) \
         != str(MarketVolToday.at[0, 'Total Shares']):
     MarketVolY0 = MarketVolY0.append(MarketVolToday, ignore_index=True)
 MarketVolY0 = MarketVolY0.sort_values('Day', ascending=False)
